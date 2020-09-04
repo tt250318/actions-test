@@ -9,6 +9,8 @@ on:
       home:
         description: 'location'
         required: false
+  repository_dispatch:
+    types: [test-event]
 
 jobs:
   say_hello:
