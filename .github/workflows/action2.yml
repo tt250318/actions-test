@@ -2,44 +2,15 @@ name: Manually triggered workflow 2
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: 'Person to greet'
+      qqq:
+        description: 'afafa'
         required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-  repository_dispatch:
-    types: [test-event]
+        default: 'eewqw'
 
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Hello ${{ github.event.inputs.name }}!"
-          echo "- in ${{ github.event.inputs.home }}!"
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJson(steps) }}
-        run: echo "$STEPS_CONTEXT"
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "$RUNNER_CONTEXT"
-      - name: Dump strategy context
-        env:
-          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-        run: echo "$STRATEGY_CONTEXT"
-      - name: Dump matrix context
-        env:
-          MATRIX_CONTEXT: ${{ toJson(matrix) }}
-        run: echo "$MATRIX_CONTEXT"
+          echo "Hello ${{ github.event.inputs.qqq }}!"
+          echo "- in ${{ github.event.inputs.qqq }}!"
